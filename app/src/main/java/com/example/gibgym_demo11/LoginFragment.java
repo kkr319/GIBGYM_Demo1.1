@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ import android.widget.Button;
  * A simple {@link Fragment} subclass.
  */
 public class LoginFragment extends Fragment {
+    String TAG = "Own TAG";
 
     public LoginFragment() {
         // Required empty public constructor
@@ -26,6 +28,7 @@ public class LoginFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        Log.d(TAG,"Main Activity Has Been Started!");
         return inflater.inflate(R.layout.fragment_login, container, false);
     }
 
@@ -40,7 +43,10 @@ public class LoginFragment extends Fragment {
                 //navCon.navigate(R.id.action_loginFragment_to_firstLogicFragment);
                 Intent intent = new Intent(getActivity(),LogicActivity.class);
                 startActivity(intent);
+                Log.d(TAG,"New Activity");
             }
         });
     }
+
+
 }

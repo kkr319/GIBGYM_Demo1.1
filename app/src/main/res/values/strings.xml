@@ -5,10 +5,20 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="button_home_register">Register</string>
     <string name="button_home_login">Log in</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="password_confirm">Confirm Password</string>
+    <string name="email">Email Address</string>
+    <string name="phone_number">Phone Number (Optional)</string>
     <string name="button_fLogic_submit">Submit</string>
     <string name="textView_fLogic_title">Set up the goals for your workouts!</string>
     <string name="textView_fLogic_dailyCal">Daily Calories Burn</string>
     <string name="textView_fLogic_weeklyCal">Weekly Calories Burn</string>
+    <string name="uagreementI">I have read and accept</string>
+    <string name="uagreementTheAgreement"><u> the user agreement</u></string>
+    <string name="uagreementAnd">and</string>
+    <string name="uagreementPrivacy"><u>the privacy policy</u></string>
+
 
 
 </resources>
