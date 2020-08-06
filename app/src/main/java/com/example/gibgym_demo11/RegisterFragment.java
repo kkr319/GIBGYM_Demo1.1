@@ -4,13 +4,8 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.method.LinkMovementMethod;
-import android.text.style.ClickableSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +13,6 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -68,20 +62,7 @@ public class RegisterFragment extends Fragment {
                 dialog.getWindow().setBackgroundDrawableResource(android.R.color.white);
             }
         });
-        /*
-        String agreement = "the User agreement";
-        SpannableString ssAgreement = new SpannableString(agreement);
-        ClickableSpan clickableSpan = new ClickableSpan() {
-            @Override
-            public void onClick(@NonNull View view) {
-                Toast.makeText(getActivity(),"clicked",Toast.LENGTH_SHORT).show();
-            }
-        };
-        ssAgreement.setSpan(clickableSpan,0,17, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        agreementTextView.setText(agreement);
-        agreementTextView.setMovementMethod(LinkMovementMethod.getInstance());
 
-         */
         TextView privacyPolicyTextView = (TextView) rootView.findViewById(R.id.textView_fReg_privacy);
         privacyPolicyTextView.setOnClickListener(new View.OnClickListener(){
             @Override

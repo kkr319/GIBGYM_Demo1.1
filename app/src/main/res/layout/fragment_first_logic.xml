@@ -82,7 +82,7 @@
             android:fontFamily="sans-serif-condensed-medium"
             android:text="@string/textView_fLogic_title"
             android:textColor="#F6EBEB"
-            android:textSize="24sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline10"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

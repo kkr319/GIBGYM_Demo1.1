@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SplashLayout">
+        <attr name="bottomPointBottomMargin" format="dimension"></attr>
+        <attr name="pointSize" format="dimension"></attr>
+        <attr name="pointRightMargin" format="dimension"></attr>
+        <attr name="showIndicator" format="boolean"></attr>
+    </declare-styleable>
+</resources>

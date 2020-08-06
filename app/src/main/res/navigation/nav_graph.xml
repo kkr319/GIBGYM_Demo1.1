@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -32,12 +32,39 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_firstLogicFragment"
-            app:destination="@id/firstLogicFragment" />
+            android:id="@+id/action_loginFragment_to_logicActivity"
+            app:destination="@id/logicActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/logicActivity"
+        android:name="com.example.gibgym_demo11.LogicActivity"
+        android:label="activity_logic"
+        tools:layout="@layout/activity_logic" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.gibgym_demo11.InitialPages.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
-        android:id="@+id/firstLogicFragment"
-        android:name="com.example.gibgym_demo11.FirstLogicFragment"
-        android:label="fragment_first_logic"
-        tools:layout="@layout/fragment_first_logic" />
+        android:id="@+id/viewPagerFragment"
+        android:name="com.example.gibgym_demo11.InitialPages.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" >
+        <action
+            android:id="@+id/action_viewPagerFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/viewPagerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
