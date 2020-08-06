@@ -22,6 +22,14 @@
     <string name="title_activity_initial">InitialActivity</string>
     <string name="next">Next</string>
     <string name="finish">Finish</string>
+    <string name="fstInitFragTitle">Position Your Device Properly</string>
+    <string name="sndInitFragTitle">Do Warm Up</string>
+    <string name="trdInitFragTitle">Never Slackening</string>
+
+    <string name="fstInitFragContent">Make sure to position your device properly to let the camera capture your body during the workout! </string>
+    <string name="sndInitFragContent">Warm up and avoid injury! </string>
+    <string name="trdInitFragContent">Great works are preformed not by strength but by perseverance!</string>
+
 
 
 </resources>
