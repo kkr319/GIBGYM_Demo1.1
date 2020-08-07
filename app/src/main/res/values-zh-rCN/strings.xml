@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GIBGYM_Demo1.1</string>
+    <string name="button_home_register">注册</string>
+    <string name="button_home_login">登录</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="password_confirm">确认密码</string>
+    <string name="email">电子邮箱</string>
+    <string name="phone_number">电话(可选)</string>
+    <string name="button_fLogic_submit">提交</string>
+    <string name="textView_fLogic_title">定制好你的运动目标！</string>
+    <string name="textView_fLogic_dailyCal">日消耗卡路里量</string>
+    <string name="textView_fLogic_weeklyCal">周消耗卡路里量</string>
+    <string name="uagreementI">\u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 我已阅读并接受 </string>
+    <string name="uagreementTheAgreement"><u>用户协议</u></string>
+    <string name="uagreementAnd"> 和 </string>
+    <string name="uagreementPrivacy"><u>隐私政策</u></string>
+    <string name="next">下一步</string>
+    <string name="finish">结束</string>
+    <string name="fstInitFragTitle">放置好你的设备</string>
+    <string name="sndInitFragTitle">请在运动前做好热身</string>
+    <string name="trdInitFragTitle">不要停滞</string>
+    <string name="fstInitFragContent">请确认放置好您的设备，让相机可以捕捉到您的全身</string>
+    <string name="sndInitFragContent">做好热身，避免受伤</string>
+    <string name="trdInitFragContent">赫赫事功非出强力，乃出有功</string>
+    <string name="emailtoast" translatable="false">注册信息已发送至您的邮箱</string>
+</resources>

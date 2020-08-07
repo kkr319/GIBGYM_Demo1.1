@@ -4,12 +4,17 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,12 +31,7 @@ import java.io.UnsupportedEncodingException;
  */
 public class RegisterFragment extends Fragment {
 
-
-
-    public RegisterFragment() {
-        // Required empty public constructor
-    }
-
+    String TAG = "Registered Successfully";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -43,7 +43,7 @@ public class RegisterFragment extends Fragment {
         agreementTextView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(),"clicked",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"User Agreement",Toast.LENGTH_SHORT).show();
                 String str = initAssets("user_agreement.txt");
                 final View inflate;
                 inflate = LayoutInflater.from(getActivity()).inflate(R.layout.dialog_agreement_privacy,null);
@@ -67,7 +67,7 @@ public class RegisterFragment extends Fragment {
         privacyPolicyTextView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(),"clicked",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"Privacy Policy",Toast.LENGTH_SHORT).show();
                 String str = initAssets("user_privacy.txt");
                 final View inflate;
                 inflate = LayoutInflater.from(getActivity()).inflate(R.layout.dialog_agreement_privacy,null);
@@ -86,7 +86,6 @@ public class RegisterFragment extends Fragment {
                 dialog.getWindow().setBackgroundDrawableResource(android.R.color.white);
             }
         });
-
         return rootView;
     }
 
@@ -124,4 +123,18 @@ public class RegisterFragment extends Fragment {
         return sb.toString();
     }
 
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        Button regButton = getView().findViewById(R.id.button_fReg_submit);
+        regButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavController navCon = Navigation.findNavController(view);
+                navCon.navigate(R.id.action_registerFragment_to_loginFragment);
+                Toast.makeText(getActivity(),getString(R.string.emailtoast),Toast.LENGTH_SHORT).show();
+            }
+        });
+        super.onActivityCreated(savedInstanceState);
+    }
 }

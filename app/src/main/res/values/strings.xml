@@ -2,8 +2,8 @@
     <string name="app_name">GIBGYM_Demo1.1</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="hello_blank_fragment2">Hello blank fragment two</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="hello_blank_fragment2" translatable="false">Hello blank fragment two</string>
     <string name="button_home_register">Register</string>
     <string name="button_home_login">Log in</string>
     <string name="username">Username</string>
@@ -15,11 +15,11 @@
     <string name="textView_fLogic_title">Set up the goal for your workouts!</string>
     <string name="textView_fLogic_dailyCal">Daily Calories Burn</string>
     <string name="textView_fLogic_weeklyCal">Weekly Calories Burn</string>
-    <string name="uagreementI">I have read and accept</string>
-    <string name="uagreementTheAgreement"><u> the user agreement</u></string>
+    <string name="uagreementI">I have read and accept </string>
+    <string name="uagreementTheAgreement"><u>the user agreement</u></string>
     <string name="uagreementAnd">and</string>
     <string name="uagreementPrivacy"><u>the privacy policy</u></string>
-    <string name="title_activity_initial">InitialActivity</string>
+    <string name="title_activity_initial" translatable="false">InitialActivity</string>
     <string name="next">Next</string>
     <string name="finish">Finish</string>
     <string name="fstInitFragTitle">Position Your Device Properly</string>
@@ -30,6 +30,7 @@
     <string name="sndInitFragContent">Warm up and avoid injury! </string>
     <string name="trdInitFragContent">Great works are preformed not by strength but by perseverance!</string>
 
+    <string name="emailtoast" translatable="false">An email has been sent to your email address</string>
 
 
 </resources>
