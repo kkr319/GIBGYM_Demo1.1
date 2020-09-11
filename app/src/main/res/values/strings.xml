@@ -25,6 +25,11 @@
     <string name="fstInitFragTitle">Position Your Device Properly</string>
     <string name="sndInitFragTitle">Do Warm Up</string>
     <string name="trdInitFragTitle">Never Slackening</string>
+    <string name="agenheight">Fill in your basic information</string>
+    <string name="age">Age\u0020 \u0020 </string>
+    <string name="weight">Body weight (kg)</string>
+    <string name="height">Height (cm)</string>
+
 
     <string name="fstInitFragContent">Make sure to position your device properly to let the camera capture your body during the workout! </string>
     <string name="sndInitFragContent">Warm up and avoid injury! </string>

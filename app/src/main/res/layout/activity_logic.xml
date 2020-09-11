@@ -7,7 +7,7 @@
     tools:context=".LogicActivity">
 
     <fragment
-        android:id="@+id/fragment3"
+        android:id="@+id/firstLogicFragment3"
         android:name="com.example.gibgym_demo11.FirstLogicFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -16,4 +16,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout="@layout/fragment_first_logic" />
+
+        <fragment
+        android:id="@+id/scrollFragment2"
+        android:name="com.example.gibgym_demo11.ScrollFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_first_logic" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

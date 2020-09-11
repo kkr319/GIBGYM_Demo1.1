@@ -25,4 +25,8 @@
     <string name="sndInitFragContent">做好热身，避免受伤</string>
     <string name="trdInitFragContent">赫赫事功非出强力，乃出有功</string>
     <string name="emailtoast" translatable="false">注册信息已发送至您的邮箱</string>
+    <string name="agenheight">请填写您的基本信息</string>
+    <string name="age">年龄\u0020 \u0020</string>
+    <string name="weight">体重 (kg)</string>
+    <string name="height">身高 (cm)</string>
 </resources>
