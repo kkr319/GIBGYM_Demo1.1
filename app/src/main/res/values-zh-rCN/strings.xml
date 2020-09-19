@@ -24,9 +24,14 @@
     <string name="fstInitFragContent">请确认放置好您的设备，让相机可以捕捉到您的全身</string>
     <string name="sndInitFragContent">做好热身，避免受伤</string>
     <string name="trdInitFragContent">赫赫事功非出强力，乃出有功</string>
-    <string name="emailtoast" translatable="false">注册信息已发送至您的邮箱</string>
+    <string name="emailtoast" >注册信息已发送至您的邮箱</string>
     <string name="agenheight">请填写您的基本信息</string>
     <string name="age">年龄\u0020 \u0020</string>
     <string name="weight">体重 (kg)</string>
     <string name="height">身高 (cm)</string>
+    <string name="forgotpass">忘记密码</string>
+    <string name="confirmation_code_thingy">请输入您在注册邮箱获得的验证码</string>
+
+
+
 </resources>

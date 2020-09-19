@@ -26,8 +26,8 @@
             android:id="@+id/action_registerFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
         <action
-            android:id="@+id/action_registerFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            android:id="@+id/action_registerFragment_to_confirmSignUp"
+            app:destination="@id/confirmSignUp" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -103,5 +103,14 @@
         <action
             android:id="@+id/action_workoutFragment_to_scrollFragment2"
             app:destination="@id/scrollFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmSignUp"
+        android:name="com.example.gibgym_demo11.ConfirmSignUp"
+        android:label="fragment_confirm_sign_up"
+        tools:layout="@layout/fragment_confirm_sign_up" >
+        <action
+            android:id="@+id/action_confirmSignUp_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
 </navigation>

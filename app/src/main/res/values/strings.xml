@@ -29,13 +29,12 @@
     <string name="age">Age\u0020 \u0020 </string>
     <string name="weight">Body weight (kg)</string>
     <string name="height">Height (cm)</string>
-
-
     <string name="fstInitFragContent">Make sure to position your device properly to let the camera capture your body during the workout! </string>
     <string name="sndInitFragContent">Warm up and avoid injury! </string>
     <string name="trdInitFragContent">Great works are preformed not by strength but by perseverance!</string>
-
-    <string name="emailtoast" translatable="false">An email has been sent to your email address</string>
-
+    <string name="emailtoast"> An email has been sent to your email address</string>
+    <string name="forgotpass"><u>I forgot my password.</u> </string>
+    <string name="confirmation_code_thingy">Please enter the confirmation code which you received via registered email</string>
+    <string name="confirmation_code" translatable="false">E.g. 012345</string>
 
 </resources>

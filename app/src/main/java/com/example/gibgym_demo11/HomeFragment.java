@@ -16,7 +16,7 @@ import android.widget.Button;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment{
 
     public HomeFragment() {
         // Required empty public constructor
@@ -52,5 +52,7 @@ public class HomeFragment extends Fragment {
                 navCon.navigate(R.id.action_homeFragment_to_loginFragment);
             }
         });
+
+
     }
 }

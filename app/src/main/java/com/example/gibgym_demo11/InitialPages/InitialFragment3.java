@@ -46,6 +46,7 @@ public class InitialFragment3 extends Fragment {
         editor.apply();
     }
     */
+
         final View view = inflater.inflate(R.layout.fragment_initial3, container, false);
 
         ((TextView)view.findViewById(R.id.init_frag_finish_btn)).setOnClickListener((View.OnClickListener)(new View.OnClickListener() {
