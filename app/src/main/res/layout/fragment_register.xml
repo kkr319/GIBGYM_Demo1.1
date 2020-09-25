@@ -71,53 +71,65 @@
             android:id="@+id/editText_fReg_uname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:backgroundTint="#F1EAEA"
             android:ems="10"
             android:hint="@string/username"
             android:inputType="textPersonName"
+            android:textColor="#F1EAEA"
+            android:textColorHint="#A9A9A9	"
             app:layout_constraintBottom_toTopOf="@+id/guideline19"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline18"
-            android:autofillHints="" />
+            app:layout_constraintTop_toTopOf="@+id/guideline18" />
 
         <EditText
             android:id="@+id/editText_fReg_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:backgroundTint="#F1EAEA"
             android:ems="10"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
+            android:textColor="#F1EAEA"
+            android:textColorHint="	#A9A9A9	"
             app:layout_constraintBottom_toTopOf="@+id/guideline20"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline19"
-            android:autofillHints="" />
+            app:layout_constraintTop_toTopOf="@+id/guideline19" />
 
         <EditText
             android:id="@+id/editText_fReg_Pass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:backgroundTint="#F1EAEA"
             android:ems="10"
             android:hint="@string/password"
             android:inputType="textPassword"
+            android:textColor="#F1EAEA"
+            android:textColorHint="#A9A9A9	"
             app:layout_constraintBottom_toTopOf="@+id/guideline21"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline20"
-            android:autofillHints="" />
+            app:layout_constraintTop_toTopOf="@+id/guideline20" />
 
         <EditText
             android:id="@+id/editText_fReg_PassConfirm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:backgroundTint="#F1EAEA"
             android:ems="10"
             android:hint="@string/password_confirm"
             android:inputType="textPassword"
+            android:textColor="#F1EAEA"
+            android:textColorHint="#A9A9A9	"
             app:layout_constraintBottom_toTopOf="@+id/guideline22"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline21"
-            android:autofillHints="" />
+            app:layout_constraintTop_toTopOf="@+id/guideline21" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline24"
@@ -131,15 +143,17 @@
             android:id="@+id/editText_fReg_phonenum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:backgroundTint="#F1EAEA"
             android:ems="10"
             android:hint="@string/phone_number"
             android:inputType="phone"
             android:textColor="#F1EAEA"
+            android:textColorHint="#A9A9A9	"
             app:layout_constraintBottom_toTopOf="@+id/guideline24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline22"
-            android:autofillHints="" />
+            app:layout_constraintTop_toTopOf="@+id/guideline22" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline25"
@@ -174,6 +188,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/uagreementI"
+            android:textColor="#F1EAEA"
             android:textSize="10sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline25"
             app:layout_constraintStart_toStartOf="@+id/guideline26"
@@ -187,6 +202,7 @@
             android:layout_marginStart="2dp"
             android:clickable="false"
             android:text="@string/uagreementTheAgreement"
+            android:textColor="#F1EAEA"
             android:textSize="10sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline25"
             app:layout_constraintStart_toEndOf="@+id/textView_fReg_IveRead"
@@ -199,6 +215,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
             android:text="@string/uagreementAnd"
+            android:textColor="#F1EAEA"
             android:textSize="10sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline25"
             app:layout_constraintStart_toEndOf="@+id/textView_fReg_uAgreement"
@@ -211,6 +228,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="2dp"
             android:text="@string/uagreementPrivacy"
+            android:textColor="#F1EAEA"
             android:textSize="10sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline25"
             app:layout_constraintStart_toEndOf="@+id/textView_fReg_and"
@@ -218,9 +236,11 @@
             app:layout_constraintVertical_bias="0.305" />
 
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/checkBox_fReg"
             android:layout_width="29dp"
             android:layout_height="18dp"
+            android:buttonTint="#F1EAEA"
+            android:textColor="#F1EAEA"
             android:textSize="10sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline25"
             app:layout_constraintEnd_toStartOf="@+id/guideline27"

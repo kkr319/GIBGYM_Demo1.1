@@ -31,6 +31,13 @@
     <string name="height">身高 (cm)</string>
     <string name="forgotpass">忘记密码</string>
     <string name="confirmation_code_thingy">请输入您在注册邮箱获得的验证码</string>
+    <string name="resend_text">在</string>
+    <string name="confirm">确认</string>
+    <string name="notReceived">\u0020 \u0020 \u0020 如未收到, </string>
+    <string name="button_resend"> 后<u>重新发送</u></string>
+    <string name="forgotpasstext">请填写验证码后重置您的密码</string>
+    <string name="newpassword">新密码</string>
+
 
 
 

@@ -39,7 +39,7 @@ public class ViewPagerFragment extends Fragment {
         fragmentList.add(new InitialFragment1());
         fragmentList.add(new InitialFragment2());
         fragmentList.add(new InitialFragment3());
-        fragmentList.add(new InitialFragment_Video());
+        //fragmentList.add(new InitialFragment_Video());
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(fragmentList,fragmentManager,lifecycle);
         ViewPager2 viewPager  = (ViewPager2) view.findViewById(R.id.viewPager);

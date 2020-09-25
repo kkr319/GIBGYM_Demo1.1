@@ -47,28 +47,34 @@
             android:id="@+id/text_login_pass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:backgroundTint="#F1EAEA"
             android:ems="10"
             android:hint="@string/password"
             android:inputType="textPassword"
+            android:textColor="#F4EFEF"
+            android:textColorHint="#A9A9A9	"
             app:layout_constraintBottom_toTopOf="@+id/guideline2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline7"
-            app:layout_constraintVertical_bias="0.287"
-            android:autofillHints="" />
+            app:layout_constraintVertical_bias="0.287" />
 
         <EditText
             android:id="@+id/text_login_uname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:backgroundTint="#F1EAEA"
             android:ems="10"
             android:hint="@string/username"
             android:inputType="textPersonName"
+            android:textColor="#F4EFEF"
+            android:textColorHint="#A9A9A9	"
             app:layout_constraintBottom_toTopOf="@+id/guideline7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline"
-            android:autofillHints="" />
+            app:layout_constraintTop_toTopOf="@+id/guideline" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline8"
@@ -95,6 +101,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/forgotpass"
+            android:textColor="#F4EFEF"
             app:layout_constraintBottom_toTopOf="@+id/guideline56"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

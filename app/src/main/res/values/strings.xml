@@ -35,6 +35,11 @@
     <string name="emailtoast"> An email has been sent to your email address</string>
     <string name="forgotpass"><u>I forgot my password.</u> </string>
     <string name="confirmation_code_thingy">Please enter the confirmation code which you received via registered email</string>
-    <string name="confirmation_code" translatable="false">E.g. 012345</string>
-
+    <string name="confirmation_code" translatable="false">e.g. 012345</string>
+    <string name="button_resend">\u0020 <u>click here</u></string>
+    <string name="notReceived">If not received in</string>
+    <string name="resend_text">After</string>
+    <string name="confirm">Confirm</string>
+    <string name="forgotpasstext">Fill in the confirmation code received in email and reset your password</string>
+    <string name="newpassword">New Password</string>
 </resources>

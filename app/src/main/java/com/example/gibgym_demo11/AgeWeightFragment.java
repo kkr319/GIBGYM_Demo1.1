@@ -3,6 +3,7 @@ package com.example.gibgym_demo11;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
@@ -14,6 +15,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
+
+import java.util.Objects;
 
 
 public class AgeWeightFragment extends Fragment {
@@ -28,18 +31,27 @@ public class AgeWeightFragment extends Fragment {
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        Button anwSubmit = getView().findViewById(R.id.button_anwfrag_button);
-        anwSubmit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               // Intent intent = new Intent(getActivity(),LogicActivity.class);
-                //startActivity(intent);
-                //Log.d(TAG,"New Activity");
-                NavController navCon = Navigation.findNavController(view);
-                navCon.navigate(R.id.action_ageWeightFragment_to_firstLogicFragment3);
-            }
+        Button anwSubmit = requireView().findViewById(R.id.button_anwfrag_button);
+        anwSubmit.setOnClickListener(view -> {
+           // Intent intent = new Intent(getActivity(),LogicActivity.class);
+            //startActivity(intent);
+            //Log.d(TAG,"New Activity");
+            NavController navCon = Navigation.findNavController(view);
+            navCon.navigate(R.id.action_ageWeightFragment_to_firstLogicFragment3);
         });
 
         super.onActivityCreated(savedInstanceState);
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        //Back button click do nothing
+        requireActivity().getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+
+            }
+        });
+        super.onCreate(savedInstanceState);
     }
 }

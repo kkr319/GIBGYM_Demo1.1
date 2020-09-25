@@ -3,6 +3,7 @@ package com.example.gibgym_demo11;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
@@ -57,4 +58,19 @@ public class ScrollFragment extends Fragment {
             }
         });
     }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+
+        //Back button click do nothing
+        getActivity().getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+
+            }
+        });
+
+        super.onCreate(savedInstanceState);
+    }
+
 }

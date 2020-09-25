@@ -18,26 +18,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.amazonaws.ClientConfiguration;
-import com.amazonaws.auth.AWSCredentialsProvider;
-import com.amazonaws.auth.AnonymousAWSCredentials;
-import com.amazonaws.auth.CognitoCachingCredentialsProvider;
-import com.amazonaws.http.HttpClient;
 import com.amazonaws.mobile.client.AWSMobileClient;
 import com.amazonaws.mobile.client.Callback;
+import com.amazonaws.mobile.client.results.ForgotPasswordResult;
 import com.amazonaws.mobile.client.results.SignInResult;
-import com.amazonaws.mobile.config.AWSConfiguration;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoDevice;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUser;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUserPool;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUserSession;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.continuations.AuthenticationContinuation;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.continuations.AuthenticationDetails;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.continuations.ChallengeContinuation;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.continuations.MultiFactorAuthenticationContinuation;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.handlers.AuthenticationHandler;
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.util.CognitoPinpointSharedContext;
-import com.amazonaws.regions.Regions;
+
 import com.amazonaws.services.cognitoidentityprovider.AmazonCognitoIdentityProviderClient;
 import com.amplifyframework.AmplifyException;
 import com.amplifyframework.auth.cognito.AWSCognitoAuthPlugin;
@@ -56,16 +41,14 @@ public class LoginFragment extends Fragment {
     private static final String TAG = LoginFragment.class.getSimpleName();
     private AmazonCognitoIdentityProviderClient client;
 
-    private String sUname;
-    private String sPassword;
-    private String sForgotPass;
+
+
 
     private String clientId= "3p15e85uuq1e30mjgs3njvi27n";
     private String userPoolId= "us-east-1_GAE2cnMWx";
     private String clientSecret= "mv59t54g8t12epi4b4nhkk1o6slmj9ognutjduh85l36ptd0pa";
     private String identityPoolId = "us-east-1:7953558d-3732-4a59-a802-b760cbd65f20";
     private String cognitoRegion = "Regions.US_EAST_1";
-
 
 
     @Override
@@ -75,17 +58,6 @@ public class LoginFragment extends Fragment {
         Log.d(TAG,"Main Activity Has Been Started!");
         View view = inflater.inflate(R.layout.fragment_login, container, false);
 
-
-        TextView forgotpassTextview = (TextView) view.findViewById(R.id.textView_login_forgotpass);
-        sForgotPass = forgotpassTextview.getText().toString();
-
-        forgotpassTextview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
         return view;
     }
 
@@ -93,7 +65,6 @@ public class LoginFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         // Add this line, to include the Auth plugin.
-
         try {
             Amplify.addPlugin(new AWSCognitoAuthPlugin());
         } catch (AmplifyException e) {
@@ -119,16 +90,24 @@ public class LoginFragment extends Fragment {
             }
         });
 
+
+        TextView forgotpassTextview = getView().findViewById(R.id.textView_login_forgotpass);
+        forgotpassTextview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                forgotpass();
+            }
+        });
+
     }
 
 
-
-
     public void login() {
+
         EditText loginuname = getView().findViewById(R.id.text_login_uname);
-        String sUname = loginuname.getText().toString();
+        final String sUname = loginuname.getText().toString();
         EditText loginupass = getView().findViewById(R.id.text_login_pass);
-        String sPassword = loginupass.getText().toString();
+        final String sPassword = loginupass.getText().toString();
 
         if (sUname.isEmpty() || sPassword.isEmpty())
         {
@@ -165,25 +144,69 @@ public class LoginFragment extends Fragment {
             @Override
             public void onError(Exception e) {
                 Log.e(TAG, "Sign-in error", e);
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if(e.toString().contains("Incorrect username")) {
+                            Toast.makeText(getActivity(), "Log in error: " + e.toString().substring(77, 107), Toast.LENGTH_LONG).show();
+                        }else if(e.toString().contains("User does not exist")){
+                            Toast.makeText(getActivity(), "Log in error: " + e.toString().substring(76, 95), Toast.LENGTH_LONG).show();
+
+                        }
+                        }
+                });
             }
         });
 
-
-
-
-        /*
-        final AWSConfiguration awsConfiguration = AWSMobileClient.getInstance().getConfiguration();
-        CognitoCachingCredentialsProvider credentialsProvider = new CognitoCachingCredentialsProvider(this.getActivity().getApplicationContext(), "us-east-1:e8820125-3328-44ec-89c7-9695c161b8c2", Regions.US_EAST_1);
-        final CognitoUserPool userPool = new CognitoUserPool(this.getActivity().getApplicationContext(),userPoolId,clientId,clientSecret);
-        final CognitoUser user = userPool.getUser(sUname); // Create a User Object with a UserId
-        user.getSessionInBackground(authenticationHandler);
-         */
     }
 
     public void forgotpass(){
+        EditText loginuname = getView().findViewById(R.id.text_login_uname);
+        final String sUname = loginuname.getText().toString();
+        AWSMobileClient.getInstance().forgotPassword(sUname, new Callback<ForgotPasswordResult>() {
+            @Override
+            public void onResult(final ForgotPasswordResult result) {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Log.d(TAG, "forgot password state: " + result.getState());
+                        switch (result.getState()) {
+                            case CONFIRMATION_CODE:
+                                makeToast("Confirmation code is sent to reset password");
+                                NavController navController = Navigation.findNavController(getView());
+                                navController.navigate(R.id.action_loginFragment_to_forgotPasswordFragment);
+                                break;
+                            default:
+                                Log.e(TAG, "un-supported forgot password state");
+                                break;
+                        }
+                    }
+                });
+            }
 
+            private void makeToast(String s) {
+                Toast.makeText(getActivity(),s,Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onError(Exception e) {
+                Log.e(TAG, "forgot password error", e);
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if(e.toString().contains("username' failed to satisfy constraint: Member must not be null")) {
+                            Toast.makeText(getActivity(), "Error: You must provide your username", Toast.LENGTH_LONG).show();
+                        }else if(e.toString().contains("Username/client id combination not found")){
+                            Toast.makeText(getActivity(), "Error: Username does not exist", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+            }
+        });
     }
 
+
+    /*
     private AuthenticationHandler authenticationHandler = new AuthenticationHandler()
     {
         @Override
@@ -226,5 +249,7 @@ public class LoginFragment extends Fragment {
 
         }
     };
+
+     */
 
 }
