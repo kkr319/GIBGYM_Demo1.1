@@ -1,4 +1,4 @@
-package com.example.gibgym_demo11;
+package com.example.gibgym_demo11.BusinessLogic;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +15,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.gibgym_demo11.R;
 
 import java.util.Objects;
 

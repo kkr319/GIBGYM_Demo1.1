@@ -1,4 +1,4 @@
-package com.example.gibgym_demo11;
+package com.example.gibgym_demo11.Authentication;
 
 import android.os.Bundle;
 
@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.amazonaws.mobile.client.AWSMobileClient;
 import com.amazonaws.mobile.client.Callback;
 import com.amazonaws.mobile.client.results.ForgotPasswordResult;
+import com.example.gibgym_demo11.R;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -76,10 +77,9 @@ public class ForgotPasswordFragment extends Fragment {
 
         if(!Snewpassword.equals(Sconpassword)){
             Toast.makeText(getActivity(),"Passwords do not match",Toast.LENGTH_LONG).show();
-        }else if(!isValidPassword(Snewpassword)||Snewpassword.length()<8){
-            Toast.makeText(getActivity(),"Passwords must be at least 8 characters and contain at least one capital letter and one special character",Toast.LENGTH_LONG).show();
-        }
-
+        }else if(!isValidPassword(Snewpassword)){
+            Toast.makeText(getActivity(),"Passwords must be at least 8 characters and contain at least one capital letter and one digit",Toast.LENGTH_LONG).show();
+        }else
         actualConfirmNewPassword(Snewpassword,SverifyCode);
 
     }
@@ -130,7 +130,7 @@ public class ForgotPasswordFragment extends Fragment {
     public boolean isValidPassword(final String password) {
         Pattern pattern;
         Matcher matcher;
-        final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{4,}$";
+        final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8,}$";
         pattern = Pattern.compile(PASSWORD_PATTERN);
         matcher = pattern.matcher(password);
         return matcher.matches();

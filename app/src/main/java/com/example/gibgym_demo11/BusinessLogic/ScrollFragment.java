@@ -1,4 +1,4 @@
-package com.example.gibgym_demo11;
+package com.example.gibgym_demo11.BusinessLogic;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +16,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
+
+import com.example.gibgym_demo11.R;
 
 
 public class ScrollFragment extends Fragment {
@@ -45,7 +47,7 @@ public class ScrollFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 NavController navCon = Navigation.findNavController(view);
-                navCon.navigate(R.id.action_scrollFragment2_to_firstLogicFragment3);
+                navCon.navigate(R.id.action_scrollFragment2_to_generalSettingsFragment);
             }
         });
 

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#548686"
+    tools:context=".Authentication.AccountSettingsFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline86"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline91"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline87"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline92"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/username"
+        android:textColor="@color/ic_launcher_background"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline90"
+        app:layout_constraintEnd_toStartOf="@+id/guideline85"
+        app:layout_constraintStart_toStartOf="@+id/guideline88"
+        app:layout_constraintTop_toTopOf="@+id/guideline86" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline88"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <TextView
+        android:id="@+id/textView_acsFrag_uname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline90"
+        app:layout_constraintEnd_toStartOf="@+id/guideline89"
+        app:layout_constraintStart_toStartOf="@+id/guideline85"
+        app:layout_constraintTop_toTopOf="@+id/guideline86" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline89"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <Button
+        android:id="@+id/button_astFrag_chpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#B6C39B"
+        android:text="@string/changePass"
+        android:textColor="#F6F0F0"
+        app:layout_constraintBottom_toTopOf="@+id/guideline87"
+        app:layout_constraintEnd_toStartOf="@+id/guideline89"
+        app:layout_constraintStart_toStartOf="@+id/guideline88"
+        app:layout_constraintTop_toTopOf="@+id/guideline91" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:lineSpacingExtra="18sp"
+        android:text="@string/rememberpass"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline91"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline90" />
+
+    <Button
+        android:id="@+id/button_astFrag_logt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#B6C39B"
+        android:text="@string/logout"
+        android:textColor="#F6F0F0"
+        app:layout_constraintBottom_toTopOf="@+id/guideline92"
+        app:layout_constraintEnd_toStartOf="@+id/guideline89"
+        app:layout_constraintStart_toStartOf="@+id/guideline88"
+        app:layout_constraintTop_toTopOf="@+id/guideline87" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

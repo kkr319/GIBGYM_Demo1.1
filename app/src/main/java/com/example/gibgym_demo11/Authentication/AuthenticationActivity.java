@@ -1,4 +1,4 @@
-package com.example.gibgym_demo11;
+package com.example.gibgym_demo11.Authentication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import com.amazonaws.mobile.client.AWSMobileClient;
 import com.amazonaws.mobile.client.Callback;
 import com.amazonaws.mobile.client.SignInUIOptions;
 import com.amazonaws.mobile.client.UserStateDetails;
+import com.example.gibgym_demo11.MainActivity;
+import com.example.gibgym_demo11.R;
 
 public class AuthenticationActivity extends AppCompatActivity {
 

@@ -21,7 +21,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
 
-        <activity android:name=".AuthenticationActivity">
+        <activity android:name=".Authentication.AuthenticationActivity">
 
         </activity>
         <activity android:name=".LogicActivity" />

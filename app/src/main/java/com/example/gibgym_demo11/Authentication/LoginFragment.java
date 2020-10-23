@@ -1,13 +1,12 @@
-package com.example.gibgym_demo11;
+package com.example.gibgym_demo11.Authentication;
 
-import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.viewpager2.widget.ViewPager2;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -27,8 +26,7 @@ import com.amazonaws.services.cognitoidentityprovider.AmazonCognitoIdentityProvi
 import com.amplifyframework.AmplifyException;
 import com.amplifyframework.auth.cognito.AWSCognitoAuthPlugin;
 import com.amplifyframework.core.Amplify;
-
-import org.json.JSONObject;
+import com.example.gibgym_demo11.R;
 
 import static com.amazonaws.mobile.auth.core.internal.util.ThreadUtils.runOnUiThread;
 
@@ -41,14 +39,6 @@ public class LoginFragment extends Fragment {
     private static final String TAG = LoginFragment.class.getSimpleName();
     private AmazonCognitoIdentityProviderClient client;
 
-
-
-
-    private String clientId= "3p15e85uuq1e30mjgs3njvi27n";
-    private String userPoolId= "us-east-1_GAE2cnMWx";
-    private String clientSecret= "mv59t54g8t12epi4b4nhkk1o6slmj9ognutjduh85l36ptd0pa";
-    private String identityPoolId = "us-east-1:7953558d-3732-4a59-a802-b760cbd65f20";
-    private String cognitoRegion = "Regions.US_EAST_1";
 
 
     @Override
@@ -65,6 +55,7 @@ public class LoginFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         // Add this line, to include the Auth plugin.
+        /*
         try {
             Amplify.addPlugin(new AWSCognitoAuthPlugin());
         } catch (AmplifyException e) {
@@ -80,6 +71,8 @@ public class LoginFragment extends Fragment {
 
         }
 
+
+         */
         Button LginLginButton = getView().findViewById(R.id.button_login_login);
             LginLginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +88,9 @@ public class LoginFragment extends Fragment {
         forgotpassTextview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                forgotpass();
+                EditText loginuname = getView().findViewById(R.id.text_login_uname);
+                final String sUname = loginuname.getText().toString();
+                forgotpass(sUname);
             }
         });
 
@@ -108,6 +103,12 @@ public class LoginFragment extends Fragment {
         final String sUname = loginuname.getText().toString();
         EditText loginupass = getView().findViewById(R.id.text_login_pass);
         final String sPassword = loginupass.getText().toString();
+
+        //Store the username for Confirm Fragment to use
+        SharedPreferences prefs = getContext().getSharedPreferences("myAppPackage", 0);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("Susername", sUname);
+        editor.commit();
 
         if (sUname.isEmpty() || sPassword.isEmpty())
         {
@@ -124,7 +125,7 @@ public class LoginFragment extends Fragment {
                             case DONE:
                                 makeToast("Sign-in done.");
                                 NavController navCon = Navigation.findNavController(getView());
-                                navCon.navigate(R.id.action_loginFragment_to_ageWeightFragment);
+                                navCon.navigate(R.id.action_loginFragment_to_UInfoFragment2);
                                 break;
                             case NEW_PASSWORD_REQUIRED:
                                 makeToast("Please confirm sign-in with new password.");
@@ -160,10 +161,8 @@ public class LoginFragment extends Fragment {
 
     }
 
-    public void forgotpass(){
-        EditText loginuname = getView().findViewById(R.id.text_login_uname);
-        final String sUname = loginuname.getText().toString();
-        AWSMobileClient.getInstance().forgotPassword(sUname, new Callback<ForgotPasswordResult>() {
+    public void forgotpass(String uname){
+        AWSMobileClient.getInstance().forgotPassword(uname, new Callback<ForgotPasswordResult>() {
             @Override
             public void onResult(final ForgotPasswordResult result) {
                 runOnUiThread(new Runnable() {

@@ -1,4 +1,4 @@
-package com.example.gibgym_demo11;
+package com.example.gibgym_demo11.Authentication;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -30,6 +30,7 @@ import com.amazonaws.mobile.client.results.UserCodeDeliveryDetails;
 import com.amplifyframework.AmplifyException;
 import com.amplifyframework.auth.cognito.AWSCognitoAuthPlugin;
 import com.amplifyframework.core.Amplify;
+import com.example.gibgym_demo11.R;
 
 import java.util.Objects;
 

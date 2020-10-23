@@ -1,4 +1,4 @@
-package com.example.gibgym_demo11;
+package com.example.gibgym_demo11.Authentication;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -42,6 +42,7 @@ import java.util.regex.Pattern;
 import com.amazonaws.mobile.client.results.SignUpResult;
 import com.amazonaws.mobile.client.Callback;
 import com.amazonaws.services.cognitoidentity.model.CognitoIdentityProvider;
+import com.example.gibgym_demo11.R;
 
 import static com.amazonaws.mobile.auth.core.internal.util.ThreadUtils.runOnUiThread;
 
@@ -232,8 +233,8 @@ public class RegisterFragment extends Fragment {
                     Toast.makeText(getActivity(),"Please fill all the fileds",Toast.LENGTH_LONG).show();
                 }else if(!Spassword.equals(SrePass)){
                     Toast.makeText(getActivity(),"Passwords do not match",Toast.LENGTH_LONG).show();
-                }else if(!isValidPassword(Spassword)||Spassword.length()<8){
-                    Toast.makeText(getActivity(),"Passwords must be at least 8 characters and contain at least one capital letter and one special character",Toast.LENGTH_LONG).show();
+                }else if(!isValidPassword(Spassword)){
+                    Toast.makeText(getActivity(),"Passwords must be at least 8 characters and contain at least one capital letter and one digit",Toast.LENGTH_LONG).show();
                 }else if(!Semail.contains("@")||!Semail.contains(".com")){
                     Toast.makeText(getActivity(),"Please input a valid email address",Toast.LENGTH_LONG).show();
                 }else if(checked==false){
@@ -252,7 +253,7 @@ public class RegisterFragment extends Fragment {
     public boolean isValidPassword(final String password) {
         Pattern pattern;
         Matcher matcher;
-        final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{4,}$";
+        final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8,}$";
         pattern = Pattern.compile(PASSWORD_PATTERN);
         matcher = pattern.matcher(password);
         return matcher.matches();

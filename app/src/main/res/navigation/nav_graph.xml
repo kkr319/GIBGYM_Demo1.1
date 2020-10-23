@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.gibgym_demo11.HomeFragment"
+        android:name="com.example.gibgym_demo11.Authentication.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.gibgym_demo11.RegisterFragment"
+        android:name="com.example.gibgym_demo11.Authentication.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
@@ -34,15 +34,18 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.gibgym_demo11.LoginFragment"
+        android:name="com.example.gibgym_demo11.Authentication.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_ageWeightFragment"
-            app:destination="@id/ageWeightFragment" />
-        <action
             android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
             app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_beforeFitnessTest"
+            app:destination="@id/beforeFitnessTest" />
+        <action
+            android:id="@+id/action_loginFragment_to_UInfoFragment2"
+            app:destination="@id/UInfoFragment" />
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
@@ -73,7 +76,7 @@
     </fragment>
     <fragment
         android:id="@+id/ageWeightFragment"
-        android:name="com.example.gibgym_demo11.AgeWeightFragment"
+        android:name="com.example.gibgym_demo11.BusinessLogic.AgeWeightFragment"
         android:label="fragment_age_weight_"
         tools:layout="@layout/fragment_age_weight_" >
         <action
@@ -82,19 +85,19 @@
     </fragment>
     <fragment
         android:id="@+id/scrollFragment2"
-        android:name="com.example.gibgym_demo11.ScrollFragment"
+        android:name="com.example.gibgym_demo11.BusinessLogic.ScrollFragment"
         android:label="fragment_scroll"
         tools:layout="@layout/fragment_scroll" >
         <action
-            android:id="@+id/action_scrollFragment2_to_firstLogicFragment3"
-            app:destination="@id/firstLogicFragment3" />
-        <action
             android:id="@+id/action_scrollFragment2_to_workoutFragment"
             app:destination="@id/workoutFragment" />
+        <action
+            android:id="@+id/action_scrollFragment2_to_generalSettingsFragment"
+            app:destination="@id/generalSettingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/firstLogicFragment3"
-        android:name="com.example.gibgym_demo11.FirstLogicFragment"
+        android:name="com.example.gibgym_demo11.BusinessLogic.FirstLogicFragment"
         android:label="fragment_first_logic"
         tools:layout="@layout/fragment_first_logic" >
         <action
@@ -103,7 +106,7 @@
     </fragment>
     <fragment
         android:id="@+id/workoutFragment"
-        android:name="com.example.gibgym_demo11.WorkoutFragment"
+        android:name="com.example.gibgym_demo11.BusinessLogic.WorkoutFragment"
         android:label="fragment_workout"
         tools:layout="@layout/fragment_workout" >
         <action
@@ -112,7 +115,7 @@
     </fragment>
     <fragment
         android:id="@+id/confirmSignUp"
-        android:name="com.example.gibgym_demo11.ConfirmSignUp"
+        android:name="com.example.gibgym_demo11.Authentication.ConfirmSignUp"
         android:label="fragment_confirm_sign_up"
         tools:layout="@layout/fragment_confirm_sign_up" >
         <action
@@ -122,11 +125,42 @@
     </fragment>
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="com.example.gibgym_demo11.ForgotPasswordFragment"
+        android:name="com.example.gibgym_demo11.Authentication.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
         tools:layout="@layout/fragment_forgot_password" >
         <action
             android:id="@+id/action_forgotPasswordFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/beforeFitnessTest"
+        android:name="com.example.gibgym_demo11.BusinessLogic.BeforeFitnessTest"
+        android:label="fragment_before_fitness_test"
+        tools:layout="@layout/fragment_before_fitness_test" />
+    <fragment
+        android:id="@+id/generalSettingsFragment"
+        android:name="com.example.gibgym_demo11.GeneralSettingsFragment"
+        android:label="fragment_general_settings"
+        tools:layout="@layout/fragment_general_settings" >
+        <action
+            android:id="@+id/action_generalSettingsFragment_to_accountSettingsFragment"
+            app:destination="@id/accountSettingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountSettingsFragment"
+        android:name="com.example.gibgym_demo11.Authentication.AccountSettingsFragment"
+        android:label="fragment_account_settings"
+        tools:layout="@layout/fragment_account_settings" >
+        <action
+            android:id="@+id/action_accountSettingsFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_accountSettingsFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/UInfoFragment"
+        android:name="com.example.gibgym_demo11.UInfoFragment"
+        android:label="fragment_u_info"
+        tools:layout="@layout/fragment_u_info" />
 </navigation>

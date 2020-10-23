@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GeneralSettingsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#548686">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline82"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline83"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline84"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline79"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recvGSFrag_rclv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:background="#548686"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton_gstFrag_wkot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#548686"
+            android:src="@drawable/squat_unselectedgreen"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline82"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline79" />
+
+        <ImageButton
+            android:id="@+id/imageButton_gstFrag_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#548686"
+            android:src="@drawable/plangreen"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline83"
+            app:layout_constraintStart_toStartOf="@+id/guideline82"
+            app:layout_constraintTop_toTopOf="@+id/guideline79" />
+
+        <ImageButton
+            android:id="@+id/imageButton_gstFrag_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#548686"
+            android:src="@drawable/stats_unselectedgreen"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline84"
+            app:layout_constraintStart_toStartOf="@+id/guideline83"
+            app:layout_constraintTop_toTopOf="@+id/guideline79" />
+
+        <ImageButton
+            android:id="@+id/imageButton_gstFrag_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#548686"
+            android:src="@drawable/settings_unselectedgreen"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline84"
+            app:layout_constraintTop_toTopOf="@+id/guideline79" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

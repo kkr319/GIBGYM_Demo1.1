@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">GIBGYM_Demo1.1</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="hello_blank_fragment2" translatable="false">Hello blank fragment two</string>
     <string name="button_home_register">Register</string>
@@ -42,4 +41,25 @@
     <string name="confirm">Confirm</string>
     <string name="forgotpasstext">Fill in the confirmation code received in email and reset your password</string>
     <string name="newpassword">New Password</string>
+    <string name="beforefintnesstesttext">It is recommended to participate our professional 3A body test. The test will give us an overview of your strengths and weakness of your body and we will make a plan for you accordingly.The test will take approximately 15 minutes.</string>
+    <string-array name="glsetarr">
+        <item>Account</item>
+        <item>Personal Data</item>
+        <item>Motion Detection</item>
+        <item>Notification</item>
+        <item>Help</item>
+        <item>About</item>
+    </string-array>
+    <string name="logout">Log out</string>
+    <string name="changePass">\u0020 Change Password \u0020</string>
+    <string name="rememberpass">Please remember your username carefully, it is a proof to retrieve your account back when password lost</string>
+    <string name="musclebuilding">Musclebuilding</string>
+    <string name="Slimming">Slimming</string>
+    <string name="Fitness">Fitness</string>
+    <string name="Restoration">Restoration</string>
+    <string name="FrequencyPerWeek">1. Frequency per week (3+ days recommended)</string>
+    <string name="DurationPerDay">2. Duration per day</string>
+    <string name="Objective">3. Objective</string>
+    <string name="Intensity">4. Intensity</string>
+    <string name="BodayParts">5. Boday parts</string>
 </resources>

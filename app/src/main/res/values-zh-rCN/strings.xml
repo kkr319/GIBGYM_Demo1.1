@@ -37,6 +37,28 @@
     <string name="button_resend"> 后<u>重新发送</u></string>
     <string name="forgotpasstext">请填写验证码后重置您的密码</string>
     <string name="newpassword">新密码</string>
+    <string name="beforefintnesstesttext">我们建议您参与我们的3A体能测试,这会使我们更加了解的您的现阶段的身体状态从而为您定制出私人化的健身计划。这项测试约花费15分钟的时间。</string>
+    <string-array name="glsetarr">
+        <item>账户设置</item>
+        <item>个人数据设置</item>
+        <item>动作捕捉</item>
+        <item>通知</item>
+        <item>帮助</item>
+        <item>关于</item>
+    </string-array>
+    <string name="logout">退出登录</string>
+    <string name="changePass">修改密码</string>
+    <string name="rememberpass">请牢记您的用户名, 一旦创建不可修改。它将作为您找回密码的唯一条件。</string>
+    <string name="musclebuilding">增肌</string>
+    <string name="Slimming">减脂</string>
+    <string name="Fitness">健身</string>
+    <string name="Restoration">恢复</string>
+
+    <string name="FrequencyPerWeek">1. 锻炼天数 (推荐三天以上)</string>
+    <string name="DurationPerDay">2. 日锻炼量</string>
+    <string name="Objective">3. 目标</string>
+    <string name="Intensity">4. 强度</string>
+    <string name="BodayParts">5. 身体部位</string>
 
 
 
