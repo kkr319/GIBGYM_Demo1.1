@@ -28,6 +28,10 @@ import com.amplifyframework.auth.cognito.AWSCognitoAuthPlugin;
 import com.amplifyframework.core.Amplify;
 import com.example.gibgym_demo11.R;
 
+import org.w3c.dom.ls.LSOutput;
+
+import io.grpc.internal.JsonUtil;
+
 import static com.amazonaws.mobile.auth.core.internal.util.ThreadUtils.runOnUiThread;
 
 
@@ -73,6 +77,8 @@ public class LoginFragment extends Fragment {
 
 
          */
+
+
         Button LginLginButton = getView().findViewById(R.id.button_login_login);
             LginLginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,7 +131,7 @@ public class LoginFragment extends Fragment {
                             case DONE:
                                 makeToast("Sign-in done.");
                                 NavController navCon = Navigation.findNavController(getView());
-                                navCon.navigate(R.id.action_loginFragment_to_UInfoFragment2);
+                                navCon.navigate(R.id.action_loginFragment_to_UInfoFragment);
                                 break;
                             case NEW_PASSWORD_REQUIRED:
                                 makeToast("Please confirm sign-in with new password.");

@@ -44,7 +44,7 @@
             android:id="@+id/action_loginFragment_to_beforeFitnessTest"
             app:destination="@id/beforeFitnessTest" />
         <action
-            android:id="@+id/action_loginFragment_to_UInfoFragment2"
+            android:id="@+id/action_loginFragment_to_UInfoFragment"
             app:destination="@id/UInfoFragment" />
     </fragment>
     <fragment
@@ -112,6 +112,9 @@
         <action
             android:id="@+id/action_workoutFragment_to_scrollFragment2"
             app:destination="@id/scrollFragment2" />
+        <action
+            android:id="@+id/action_workoutFragment_to_camFragment"
+            app:destination="@id/camFragment" />
     </fragment>
     <fragment
         android:id="@+id/confirmSignUp"
@@ -162,5 +165,14 @@
         android:id="@+id/UInfoFragment"
         android:name="com.example.gibgym_demo11.UInfoFragment"
         android:label="fragment_u_info"
-        tools:layout="@layout/fragment_u_info" />
+        tools:layout="@layout/fragment_u_info" >
+        <action
+            android:id="@+id/action_UInfoFragment_to_scrollFragment2"
+            app:destination="@id/scrollFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/camFragment"
+        android:name="com.example.gibgym_demo11.BusinessLogic.CamFragment"
+        android:label="fragment_cam"
+        tools:layout="@layout/fragment_cam" />
 </navigation>

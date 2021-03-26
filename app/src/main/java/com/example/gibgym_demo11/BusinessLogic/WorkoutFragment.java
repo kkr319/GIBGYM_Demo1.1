@@ -34,6 +34,15 @@ public class WorkoutFragment extends Fragment {
             }
         });
 
+        ImageButton startwktbt = getView().findViewById(R.id.wofrag_imageButton_start);
+        startwktbt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavController navCon = Navigation.findNavController(v);
+                navCon.navigate(R.id.action_workoutFragment_to_camFragment);
+            }
+        });
+
         super.onActivityCreated(savedInstanceState);
     }
 }
