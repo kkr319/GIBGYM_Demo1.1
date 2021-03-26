@@ -1,0 +1,34 @@
+type Task @model {
+  username: String!
+  monday: String
+  tuesday: String
+  wednesday: String
+  thursday: String
+  friday: String
+  saturday: String
+  sunday: String
+  fifteen: String
+  twentyfive: String
+  thirtyfive: String
+  fortyfive: String
+  muscle: String
+  slim: String
+  fit: String
+  restoration: String
+  intensity: String
+  waist: String
+  arms: String
+  legs: String
+  hip: String
+  shoulder: String
+  chest: String
+  back: String
+  neck: String
+  whole: String
+  abdomen: String
+}
+
+enum PostStatus {
+  DRAFT
+  PUBLISHED
+}

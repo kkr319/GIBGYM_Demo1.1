@@ -1,0 +1,30 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-gibgymdemo11-dev-205423-authRole",
+      "UnauthRoleArn": "arn:aws:iam::643861567451:role/amplify-gibgymdemo11-dev-205423-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::643861567451:role/amplify-gibgymdemo11-dev-205423-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-gibgymdemo11-dev-205423-deployment",
+      "UnauthRoleName": "amplify-gibgymdemo11-dev-205423-unauthRole",
+      "StackName": "amplify-gibgymdemo11-dev-205423",
+      "StackId": "arn:aws:cloudformation:us-east-1:643861567451:stack/amplify-gibgymdemo11-dev-205423/616c4050-f529-11ea-b570-0e2e9aec3a21",
+      "AmplifyAppId": "d3vzivwxwgkvc1"
+    },
+    "categories": {
+      "function": {
+        "gibgymdemo1PostConfirmation": {
+          "GROUP": "gibgymusergroupdemo1"
+        },
+        "gibgymdemo1CustomMessage": {
+          "REDIRECTURL": "",
+          "EMAILSUBJECT": "",
+          "EMAILMESSAGE": "GIBGYM Process Succeeded "
+        }
+      },
+      "auth": {
+        "resourcegibgymdemo0914": {}
+      }
+    }
+  }
+}

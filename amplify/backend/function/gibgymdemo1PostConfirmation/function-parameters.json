@@ -1,0 +1,17 @@
+{
+  "trigger": true,
+  "modules": [
+    "add-to-group"
+  ],
+  "parentResource": "gibgymdemo1",
+  "functionName": "gibgymdemo1PostConfirmation",
+  "resourceName": "gibgymdemo1PostConfirmation",
+  "parentStack": "auth",
+  "triggerEnvs": "[]",
+  "triggerDir": "C:\\Users\\kkr03\\AppData\\Roaming\\npm\\node_modules\\@aws-amplify\\cli\\node_modules\\amplify-category-auth\\provider-utils\\awscloudformation\\triggers\\PostConfirmation",
+  "triggerTemplate": "PostConfirmation.json.ejs",
+  "roleName": "gibgymdemo1PostConfirmation",
+  "skipEdit": true,
+  "GROUP": "gibgymusergroupdemo1",
+  "triggerEventPath": "PostConfirmation.event.json"
+}

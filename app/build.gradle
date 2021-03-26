@@ -1,22 +1,26 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.protobuf'
+
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 28
     buildToolsVersion "29.0.3"
-
-
 
     defaultConfig {
         applicationId "com.example.gibgym_demo11"
         minSdkVersion 24
-        targetSdkVersion 30
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-
         multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
+    }
+
+    dexOptions {
+        preDexLibraries = false
+        additionalParameters=['--core-library']
     }
 
     compileOptions {
@@ -24,9 +28,31 @@ android {
         coreLibraryDesugaringEnabled true
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+
+    }
+
+    protobuf {
+        protoc { artifact = 'com.google.protobuf:protoc:3.12.0' }
+        plugins {
+            grpc { artifact = 'io.grpc:protoc-gen-grpc-java:1.33.1' // CURRENT_GRPC_VERSION
+            }
+        }
+        generateProtoTasks {
+            all().each { task ->
+                task.builtins {
+                    java { option 'lite' }
+                }
+                task.plugins {
+                    grpc { // Options added to --grpc_out
+                        option 'lite' }
+                }
+            }
+        }
     }
 
     buildTypes {
+
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -45,9 +71,14 @@ dependencies {
     implementation 'androidx.viewpager:viewpager:1.0.0'
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
     implementation 'com.google.android.material:material:1.1.0'
+    implementation files('libs\\aip-java-sdk-4.15.1.jar')
+    implementation project(path: ':sdk')
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation "com.google.truth:truth:1.0.1"
+
     implementation 'androidx.navigation:navigation-fragment:2.3.0'
     implementation 'androidx.navigation:navigation-ui:2.3.0'
     implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
@@ -85,11 +116,22 @@ dependencies {
     implementation 'com.amazonaws:aws-android-sdk-ddb:2.15.2'
     implementation 'com.amazonaws:aws-android-sdk-ddb-document:2.6.31'
 
+    //grpc
+    implementation 'io.grpc:grpc-okhttp:1.34.1'
+    implementation 'io.grpc:grpc-protobuf-lite:1.34.1'
+    implementation 'io.grpc:grpc-stub:1.34.1'
+    compileOnly 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
+
+
+    //baidu
 
 
 }
+
 repositories {
     maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
     mavenCentral()
 }
+
+
 

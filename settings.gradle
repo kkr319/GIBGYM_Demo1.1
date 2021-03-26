@@ -1,2 +1,3 @@
+include ':sdk'
 rootProject.name='GIBGYM_Demo1.1'
 include ':app'
